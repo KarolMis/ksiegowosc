@@ -1,4 +1,5 @@
 import controllers.CompanyController;
+import enums.State;
 import exceptions.AdminNotFoundException;
 import models.Admin;
 import models.AdminRegistry;
@@ -6,13 +7,6 @@ import models.AdminRegistry;
 import java.util.Scanner;
 
 public class Main {
-    public enum State {
-       INIT,
-       LOGGING_IN_AS_ADMIN,
-       LOGGED_IN,
-       CREATING_COMPANY,
-       EXIT,
-    }
 
     public static void main(String[] args) {
         State state = State.INIT;

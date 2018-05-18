@@ -1,27 +1,10 @@
 package models;
 
-public class Admin {
-    private String login;
-    private String password;
+import java.io.Serializable;
+
+public class Admin extends User implements Serializable {
 
     public Admin(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        super(login,password);
     }
 }

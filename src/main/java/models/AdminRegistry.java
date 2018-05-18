@@ -16,7 +16,7 @@ public class AdminRegistry {
        return instance;
     }
 
-    public AdminRegistry() {
+    private AdminRegistry() {
         this.admins = new ArrayList<>();
         this.admins.add(new Admin("adam", "123"));
         this.admins.add(new Admin("ziutek", "456"));
@@ -27,6 +27,19 @@ public class AdminRegistry {
         for(Admin admin : admins) {
             if(admin.getLogin().equals(login) && admin.getPassword().equals(password)) {
                 return admin;
+            }
+        }
+        throw new AdminNotFoundException();
+    }
+
+    public void addAdmin(String login, String password) {
+        admins.add(new Admin(login, password));
+    }
+
+    public void removeAdmin(String login) throws AdminNotFoundException {
+        for(Admin admin : admins) {
+            if(admin.getLogin().equals(login)){
+                admins.remove(admin);
             }
         }
         throw new AdminNotFoundException();

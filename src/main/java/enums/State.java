@@ -3,7 +3,10 @@ package enums;
 public enum State {
     INIT,
     LOGGING_IN_AS_ADMIN,
-    LOGGED_IN,
+    LOGGING_IN_AS_ACCOUNTANT,
+    LOGGED_IN_AS_ADMIN,
+    LOGGED_IN_AS_ACCOUNTANT,
+    MANAGING_ADMINS,
     CREATING_COMPANY,
     EXIT,
 }

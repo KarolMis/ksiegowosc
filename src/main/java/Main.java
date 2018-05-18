@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         State state = State.INIT;
         Scanner scanner = new Scanner(System.in);
-            Admin currentAdmin = null;
+            Admin currentAdmin;
 
             while (state != State.EXIT) {
             switch(state) {
@@ -21,7 +21,7 @@ public class Main {
                     System.out.println(" 0 - wyjść z programu");
 
                         switch (scanner.nextInt()) {
-                        case 1:
+                            case 1:
                             state = State.LOGGING_IN_AS_ADMIN;
                             scanner.nextLine();
                             break;
@@ -34,7 +34,7 @@ public class Main {
                             default:
                             System.out.println("Zła odpowiedź");
                             state = State.INIT;
-                           scanner.nextLine();
+                            scanner.nextLine();
                             break;
                         }
                     break;
